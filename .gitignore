@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments & environments
+automation/.env
+automation/.venv/
+.venv/
+
+# Test results
+automation/results/
+
+# Misc testing
+automation/isolation_tests/
+automation/misc_tests/
+automation/model_tests/
+
+# Legacy testing
+/automation/legacy/
+
+# Misc
+/tests/00_initial_behavioral/
+/tests/behavioral_context_experiment/

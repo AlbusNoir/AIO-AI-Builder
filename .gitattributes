@@ -1,0 +1,8 @@
+# Preserve source bytes across Windows/Linux checkouts so the public export
+# manifest and canonical runtime references remain byte-identical.
+* -text
+
+# Skill frontmatter must start with LF; these are verified as LF at export.
+platforms/chatgpt/SKILL.md text eol=lf
+platforms/claude/SKILL.md text eol=lf
+platforms/gemini/SKILL.md text eol=lf

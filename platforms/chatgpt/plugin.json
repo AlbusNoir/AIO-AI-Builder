@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aio-ai-builder",
+  "version": "0.1.0-dev",
+  "description": "Design, configure, audit and improve specialized AI assistants using the AIO AI Builder workflow and curated design references.",
+  "keywords": [
+    "assistant-design",
+    "custom-gpts",
+    "prompt-engineering"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AIO AI Builder",
+        "shortDescription": "Design and refine specialized AI assistants.",
+        "longDescription": "Create, audit, and improve assistant specifications, including Custom GPTs and cross-platform agents, with source-aware requirements, conditional capabilities, and validation plans. No external tools or deployments are included."
+      }
+    }
+  }
+}

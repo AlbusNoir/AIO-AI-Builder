@@ -1,0 +1,28 @@
+name: Validate Public Source
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify exported file hashes
+        run: python -B automation/verify_public_manifest.py
+      - name: Run public unit tests
+        run: python -B run_tests.py
+      - name: Check package source contracts
+        run: python -B tests/08_package_contract/package_contract.py
+      - name: Check V2 static contracts
+        run: python -B tests/09_v2_behavioral/run_static_contract.py
+      - name: Rebuild and verify four platform adapters
+        run: python -B automation/build_releases.py --all --adapter-version 1.1.0

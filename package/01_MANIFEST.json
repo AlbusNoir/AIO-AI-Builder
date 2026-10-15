@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0",
+  "package": {
+    "id": "assistant-package",
+    "name": "AIO AI Assistant Package",
+    "version": "0.2.0",
+    "status": "release-candidate",
+    "description": "Platform-agnostic modular package architecture for constructing specialized AI assistants from a minimal behavioral kernel, a master operating specification, selectively activated modules, and authoritative references."
+  },
+  "bootstrap": {
+    "path": "PASTE_THIS_INTO_THE_GPT.txt",
+    "required": true,
+    "purpose": "Minimal platform-facing bootstrap containing the Behavioral Kernel required to activate and govern the package."
+  },
+  "kernel": {
+    "path": "PASTE_THIS_INTO_THE_GPT.txt",
+    "required": true,
+    "embedded": true,
+    "purpose": "Always-on behavioral invariants governing identity, defined requirements, adaptive execution, source fidelity, capability reality, action honesty, evidence integrity, claim calibration, and material uncertainty."
+  },
+  "master_spec": {
+    "path": "02_MASTER_OPERATING_SPEC.md",
+    "required": true,
+    "version": "0.2.0",
+    "purpose": "General runtime operating baseline for identity, purpose, role, expertise, objectives, scope, interaction, response, knowledge, capabilities, reasoning, and boundaries."
+  },
+  "modules": {
+    "governing": [
+      {
+        "id": "GM-02",
+        "path": "modules/governing/GM-02_Knowledge_Source_Handling.md",
+        "name": "Knowledge & Source Handling",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-03",
+        "path": "modules/governing/GM-03_Document_File_Analysis.md",
+        "name": "Document / File Analysis",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-04",
+        "path": "modules/governing/GM-04_External_Research.md",
+        "name": "External Research",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-05",
+        "path": "modules/governing/GM-05_Specialized_Methodology_Execution.md",
+        "name": "Specialized Methodology Execution",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-06",
+        "path": "modules/governing/GM-06_Consequential_Domain_Safeguards.md",
+        "name": "Consequential Domain Safeguards",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-07",
+        "path": "modules/governing/GM-07_Adaptive_Decision_Support.md",
+        "name": "Adaptive Decision Support",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-08",
+        "path": "modules/governing/GM-08_Knowledge_Bounded_Operation.md",
+        "name": "Knowledge-Bounded Operation",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-09",
+        "path": "modules/governing/GM-09_Specialized_Response_Patterns.md",
+        "name": "Specialized Response Patterns",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-12",
+        "path": "modules/governing/GM-12_Multimodal_and_Image_Interpretation.md",
+        "name": "Multimodal and Image Interpretation",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-13",
+        "path": "modules/governing/GM-13_Interactive_Learning_and_Scenario_Training.md",
+        "name": "Interactive Learning and Scenario Training",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "GM-14",
+        "path": "modules/governing/GM-14_Personalized_Resource_Recommendations.md",
+        "name": "Personalized Resource Recommendations",
+        "type": "governing",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      }
+    ],
+    "supporting": [
+      {
+        "id": "SM-01",
+        "path": "modules/supporting/SM-01_Supplemental_User_Engagement.md",
+        "name": "Supplemental User Engagement",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-02",
+        "path": "modules/supporting/SM-02_Resource_and_Reference_Guidance.md",
+        "name": "Resource and Reference Guidance",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-03",
+        "path": "modules/supporting/SM-03_Supplemental_Expertise_and_Persona_Expression.md",
+        "name": "Supplemental Expertise and Persona Expression",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-04",
+        "path": "modules/supporting/SM-04_Supplemental_Structured_Response_and_Tone.md",
+        "name": "Supplemental Structured Response and Tone",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-05",
+        "path": "modules/supporting/SM-05_Supplemental_Iterative_Feedback_and_Adaptation.md",
+        "name": "Supplemental Iterative Feedback and Adaptation",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-06",
+        "path": "modules/supporting/SM-06_Supplemental_Selective_Information_Handling.md",
+        "name": "Supplemental Selective Information Handling",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-07",
+        "path": "modules/supporting/SM-07_Supplemental_Guided_Entry_and_Conversation_Starters.md",
+        "name": "Supplemental Guided Entry and Conversation Starters",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-08",
+        "path": "modules/supporting/SM-08_Supplemental_User_Guided_Preferences_and_Confirmation.md",
+        "name": "Supplemental User-Guided Preferences and Confirmation",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-09",
+        "path": "modules/supporting/SM-09_Supplemental_Scenario_and_Role-Play_Support.md",
+        "name": "Supplemental Scenario and Role-Play Support",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-10",
+        "path": "modules/supporting/SM-10_Supplemental_Interactive_Practice_and_Assessment.md",
+        "name": "Supplemental Interactive Practice and Assessment",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      },
+      {
+        "id": "SM-11",
+        "path": "modules/supporting/SM-11_Support_and_Feedback.md",
+        "name": "Support and Feedback",
+        "type": "supporting",
+        "required": false,
+        "activation": "conditional",
+        "status": "defined",
+        "dependencies": [
+          "kernel",
+          "master_spec",
+          "REF-CN-001"
+        ]
+      }
+    ]
+  },
+  "references": {
+    "canonical": [
+      {
+        "id": "REF-CN-001",
+        "path": "references/canonical/REF-CN-001_Canonical_Module_Contract.md",
+        "role": "canonical",
+        "required": true,
+        "status": "active"
+      },
+      {
+        "id": "REF-CN-002",
+        "path": "references/canonical/REF-CN-002_Canonical_Capability_Contract.md",
+        "role": "canonical",
+        "required": true,
+        "status": "active"
+      },
+      {
+        "id": "REF-CN-003",
+        "path": "references/canonical/REF-CN-003_Canonical_Identifier_Registry.md",
+        "role": "canonical",
+        "required": true,
+        "status": "active"
+      },
+      {
+        "id": "REF-CN-004",
+        "path": "references/canonical/REF-CN-004_Canonical_Package_Manifest_Schema.md",
+        "role": "canonical",
+        "required": true,
+        "status": "active"
+      }
+    ],
+    "examples": [],
+    "templates": []
+  },
+  "metadata": {
+    "architecture_status": "working",
+    "architecture_style": "platform-agnostic modular package",
+    "kernel_strategy": "minimal always-on behavioral kernel",
+    "module_strategy": "selective composition",
+    "authority_strategy": "multi-dimensional authority",
+    "behavioral_principle": "canonical ownership",
+    "integrity_principle": "universal integrity once; specialized application in modules",
+    "development_artifacts_excluded_from_package": true
+  }
+}

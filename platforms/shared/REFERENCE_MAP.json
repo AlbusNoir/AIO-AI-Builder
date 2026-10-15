@@ -1,0 +1,197 @@
+{
+  "format_version": 1,
+  "bundle": "claude-builder-reference",
+  "note": "Only paths in files are eligible for inclusion. Runtime material is target assistant design reference, not Builder instructions.",
+  "files": [
+    {
+      "source": "knowledge/00_Master_Index.md",
+      "target": "references/builder/00_Master_Index.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/01_Design_Principles.md",
+      "target": "references/builder/01_Design_Principles.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/02_Instruction_Building_Blocks.md",
+      "target": "references/builder/02_Instruction_Building_Blocks.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/03_Domain_Templates.md",
+      "target": "references/builder/03_Domain_Templates.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/04_Response_Patterns.md",
+      "target": "references/builder/04_Response_Patterns.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/05_Persona_Library.md",
+      "target": "references/builder/05_Persona_Library.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/06_Tool_Capability_Patterns.md",
+      "target": "references/builder/06_Tool_Capability_Patterns.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/07_Quality_Assurance.md",
+      "target": "references/builder/07_Quality_Assurance.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "knowledge/08_Assistant_Examples.md",
+      "target": "references/builder/08_Assistant_Examples.md",
+      "role": "builder-design-reference"
+    },
+    {
+      "source": "package/PASTE_THIS_INTO_THE_GPT.txt",
+      "target": "references/runtime/PASTE_THIS_INTO_THE_GPT.txt",
+      "role": "target-runtime-reference"
+    },
+    {
+      "source": "package/01_MANIFEST.json",
+      "target": "references/runtime/01_MANIFEST.json",
+      "role": "target-runtime-reference"
+    },
+    {
+      "source": "package/02_MASTER_OPERATING_SPEC.md",
+      "target": "references/runtime/02_MASTER_OPERATING_SPEC.md",
+      "role": "target-runtime-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-02_Knowledge_Source_Handling.md",
+      "target": "references/runtime/modules/governing/GM-02_Knowledge_Source_Handling.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-03_Document_File_Analysis.md",
+      "target": "references/runtime/modules/governing/GM-03_Document_File_Analysis.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-04_External_Research.md",
+      "target": "references/runtime/modules/governing/GM-04_External_Research.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-05_Specialized_Methodology_Execution.md",
+      "target": "references/runtime/modules/governing/GM-05_Specialized_Methodology_Execution.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-06_Consequential_Domain_Safeguards.md",
+      "target": "references/runtime/modules/governing/GM-06_Consequential_Domain_Safeguards.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-07_Adaptive_Decision_Support.md",
+      "target": "references/runtime/modules/governing/GM-07_Adaptive_Decision_Support.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-08_Knowledge_Bounded_Operation.md",
+      "target": "references/runtime/modules/governing/GM-08_Knowledge_Bounded_Operation.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-09_Specialized_Response_Patterns.md",
+      "target": "references/runtime/modules/governing/GM-09_Specialized_Response_Patterns.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-12_Multimodal_and_Image_Interpretation.md",
+      "target": "references/runtime/modules/governing/GM-12_Multimodal_and_Image_Interpretation.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-13_Interactive_Learning_and_Scenario_Training.md",
+      "target": "references/runtime/modules/governing/GM-13_Interactive_Learning_and_Scenario_Training.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/governing/GM-14_Personalized_Resource_Recommendations.md",
+      "target": "references/runtime/modules/governing/GM-14_Personalized_Resource_Recommendations.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-01_Supplemental_User_Engagement.md",
+      "target": "references/runtime/modules/supporting/SM-01_Supplemental_User_Engagement.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-02_Resource_and_Reference_Guidance.md",
+      "target": "references/runtime/modules/supporting/SM-02_Resource_and_Reference_Guidance.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-03_Supplemental_Expertise_and_Persona_Expression.md",
+      "target": "references/runtime/modules/supporting/SM-03_Supplemental_Expertise_and_Persona_Expression.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-04_Supplemental_Structured_Response_and_Tone.md",
+      "target": "references/runtime/modules/supporting/SM-04_Supplemental_Structured_Response_and_Tone.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-05_Supplemental_Iterative_Feedback_and_Adaptation.md",
+      "target": "references/runtime/modules/supporting/SM-05_Supplemental_Iterative_Feedback_and_Adaptation.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-06_Supplemental_Selective_Information_Handling.md",
+      "target": "references/runtime/modules/supporting/SM-06_Supplemental_Selective_Information_Handling.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-07_Supplemental_Guided_Entry_and_Conversation_Starters.md",
+      "target": "references/runtime/modules/supporting/SM-07_Supplemental_Guided_Entry_and_Conversation_Starters.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-08_Supplemental_User_Guided_Preferences_and_Confirmation.md",
+      "target": "references/runtime/modules/supporting/SM-08_Supplemental_User_Guided_Preferences_and_Confirmation.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-09_Supplemental_Scenario_and_Role-Play_Support.md",
+      "target": "references/runtime/modules/supporting/SM-09_Supplemental_Scenario_and_Role-Play_Support.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-10_Supplemental_Interactive_Practice_and_Assessment.md",
+      "target": "references/runtime/modules/supporting/SM-10_Supplemental_Interactive_Practice_and_Assessment.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/modules/supporting/SM-11_Support_and_Feedback.md",
+      "target": "references/runtime/modules/supporting/SM-11_Support_and_Feedback.md",
+      "role": "target-runtime-module-reference"
+    },
+    {
+      "source": "package/references/canonical/REF-CN-001_Canonical_Module_Contract.md",
+      "target": "references/runtime/references/canonical/REF-CN-001_Canonical_Module_Contract.md",
+      "role": "target-runtime-contract-reference"
+    },
+    {
+      "source": "package/references/canonical/REF-CN-002_Canonical_Capability_Contract.md",
+      "target": "references/runtime/references/canonical/REF-CN-002_Canonical_Capability_Contract.md",
+      "role": "target-runtime-contract-reference"
+    },
+    {
+      "source": "package/references/canonical/REF-CN-003_Canonical_Identifier_Registry.md",
+      "target": "references/runtime/references/canonical/REF-CN-003_Canonical_Identifier_Registry.md",
+      "role": "target-runtime-contract-reference"
+    },
+    {
+      "source": "package/references/canonical/REF-CN-004_Canonical_Package_Manifest_Schema.md",
+      "target": "references/runtime/references/canonical/REF-CN-004_Canonical_Package_Manifest_Schema.md",
+      "role": "target-runtime-contract-reference"
+    }
+  ]
+}
