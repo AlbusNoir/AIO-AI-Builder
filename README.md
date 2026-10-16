@@ -1,6 +1,6 @@
 # AIO AI Builder
 
-**Public source distribution for stable release v1.1.0.**
+**Public source distribution for stable release v1.2.0.**
 
 AIO AI Builder is a modular framework for designing purpose-built AI assistants. The **Builder** designs other assistants; it does not automatically install them, grant tools, or execute their future work.
 
@@ -28,7 +28,7 @@ From the repository root:
 python run_tests.py
 python tests/08_package_contract/package_contract.py
 python tests/09_v2_behavioral/run_static_contract.py
-python automation/build_releases.py --all --adapter-version 1.1.0
+python automation/build_releases.py --all --adapter-version 1.2.0
 ```
 
 The last command runs the public checks, builds four adapter archives, verifies file contents and checksums, and rebuilds them for reproducibility. Artifacts are staged under `dist/release-stage/`. Use `--replace` only when overwriting an intact stage created by that runner.
@@ -37,7 +37,7 @@ See [Building from Source](docs/BUILDING.md) and [Installation Guide](docs/INSTA
 
 ## Source provenance and release status
 
-This public snapshot corresponds to stable release **v1.1.0**, but uses a new public Git history. Its Git commit SHA therefore differs from the private authoritative repository's commit. Adapter output may contain the *public* checkout's commit provenance or no commit if built outside Git. **Byte-for-byte matching the officially published release archives is not promised.**
+This public snapshot corresponds to stable release **v1.2.0**, but uses a new public Git history. Its Git commit SHA therefore differs from the private authoritative repository's commit. Adapter output may contain the *public* checkout's commit provenance or no commit if built outside Git. **Byte-for-byte matching the officially published release archives is not promised.**
 
 `PUBLIC_SOURCE_MANIFEST.json` lists the intended public files and hashes; it is an inventory/integrity aid, not a signature or independent authentication of the source's origin. Official binary releases are distributed separately by the project maintainer; a locally staged archive is not an officially published release.
 

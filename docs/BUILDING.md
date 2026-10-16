@@ -1,4 +1,4 @@
-# Building AIO AI Builder v1.1.0 from Public Source
+# Building AIO AI Builder v1.2.0 from Public Source
 
 ## Requirements
 
@@ -10,17 +10,17 @@ From the root of this repository:
 python run_tests.py
 python tests/08_package_contract/package_contract.py
 python tests/09_v2_behavioral/run_static_contract.py
-python automation/build_releases.py --all --adapter-version 1.1.0
+python automation/build_releases.py --all --adapter-version 1.2.0
 ```
 
 The unified runner re-runs the three public checks, builds two independent copies of each adapter and verifies matching archive digests, file allowlists and `.sha256` files. Outputs:
 
 ```text
 dist/release-stage/
-  AIO-AI-Builder-ChatGPT-Plugin-1.1.0.zip
-  AIO-AI-Builder-Claude-Skill-1.1.0.zip
-  AIO-AI-Builder-Gemini-Apps-Skill-1.1.0.zip
-  AIO-AI-Builder-Gemini-CLI-Skill-1.1.0.skill
+  AIO-AI-Builder-ChatGPT-Plugin-1.2.0.zip
+  AIO-AI-Builder-Claude-Skill-1.2.0.zip
+  AIO-AI-Builder-Gemini-Apps-Skill-1.2.0.zip
+  AIO-AI-Builder-Gemini-CLI-Skill-1.2.0.skill
   [one .sha256 next to each archive]
   SHA256SUMS.txt
   build-manifest.json

@@ -72,7 +72,8 @@ def source_commit() -> str | None:
 
 
 def check_frontmatter(text: str) -> None:
-    match = re.match(r"\A---\n(.*?)\n---\n", text, re.S)
+    # Validate that the SKILL.md file has the correct YAML frontmatter. Don't error on CRLF
+    match = re.match(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|\Z)", text, re.S)
     if not match:
         raise BuildError("SKILL.md requires YAML frontmatter as its first content")
     fields: dict[str, str] = {}

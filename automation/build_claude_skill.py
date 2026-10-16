@@ -66,7 +66,8 @@ def read_source(relative: str) -> bytes:
 
 
 def check_skill_frontmatter(content: str) -> None:
-    m = re.match(r"\A---\n(.*?)\n---\n", content, flags=re.S)
+    # Check that the SKILL.md file has valid YAML frontmatter. Don't error on CRLF
+    m = re.match(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|\Z)", content, flags=re.S)
     if not m:
         raise BuildError("Claude SKILL.md missing YAML frontmatter")
     fields = {}
@@ -213,7 +214,7 @@ def build_files(version: str = DEFAULT_VERSION) -> dict[str, bytes]:
 
 def validate_paths(files: dict[str, bytes]) -> None:
     # Only generated top-level and relative Markdown paths, not arbitrary filesystem references.
-    if not files["SKILL.md"].startswith(b"---\n"):
+    if not files["SKILL.md"].startswith((b"---\n", b"---\r\n")):  # Allows for CRLF frontmatter in byte-level check
         raise BuildError("Missing skill frontmatter")
     for rel in ("SKILL.md", "references/BUILDER_INDEX.md"):
         text = files[rel].decode("utf-8")

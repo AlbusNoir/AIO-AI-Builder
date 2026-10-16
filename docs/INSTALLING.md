@@ -6,10 +6,10 @@ Run the build command in [BUILDING.md](BUILDING.md), then examine `dist/release-
 
 | Host | Produced file | Contents and intended use |
 |---|---|---|
-| ChatGPT | `AIO-AI-Builder-ChatGPT-Plugin-1.1.0.zip` | Skills-only plugin archive with `plugin.json` and `skills/aio-ai-builder/` |
-| Claude | `AIO-AI-Builder-Claude-Skill-1.1.0.zip` | Skill archive rooted at `aio-ai-builder/` |
-| Gemini Apps | `AIO-AI-Builder-Gemini-Apps-Skill-1.1.0.zip` | Skill and reference files intended for Gemini-compatible app setup |
-| Gemini CLI | `AIO-AI-Builder-Gemini-CLI-Skill-1.1.0.skill` | ZIP-format skill archive with `aio-ai-builder/` root |
+| ChatGPT | `AIO-AI-Builder-ChatGPT-Plugin-1.2.0.zip` | Skills-only plugin archive with `plugin.json` and `skills/aio-ai-builder/` |
+| Claude | `AIO-AI-Builder-Claude-Skill-1.2.0.zip` | Skill archive rooted at `aio-ai-builder/` |
+| Gemini Apps | `AIO-AI-Builder-Gemini-Apps-Skill-1.2.0.zip` | Skill and reference files intended for Gemini-compatible app setup |
+| Gemini CLI | `AIO-AI-Builder-Gemini-CLI-Skill-1.2.0.skill` | ZIP-format skill archive with `aio-ai-builder/` root |
 
 Host installation and supported upload formats differ across products, plans and deployments. Consult your host's current instructions before importing or extracting an archive. **Do not assume every host supports direct ZIP import or the `.skill` suffix.** If a host has no direct import mechanism, its editable instructions and knowledge interfaces may require manual configuration using the included skill and reference documents.
 

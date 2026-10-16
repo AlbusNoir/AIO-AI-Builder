@@ -49,6 +49,38 @@ class ChatGPTPluginTests(unittest.TestCase):
         self.assertIn("ordinary research", skill)
         self.assertIn("not the target assistant", skill)
 
+    def test_frontmatter_line_endings_and_invalid_inputs(self):
+        """Accept LF/CRLF frontmatter while rejecting malformed input."""
+        valid = (
+            "---\n"
+            "name: aio-ai-builder\n"
+            "description: Designs specialized AI assistants.\n"
+            "---\n"
+        )
+
+        accepted = {
+            "LF": valid,
+            "CRLF": valid.replace("\n", "\r\n"),
+            "LF at EOF": valid.rstrip("\n"),
+            "CRLF at EOF": valid.replace("\n", "\r\n").rstrip("\r\n"),
+        }
+
+        for case, text in accepted.items():
+            with self.subTest(case=case):
+                common.check_frontmatter(text)
+
+        rejected = {
+            "missing opening delimiter": valid.removeprefix("---\n"),
+            "missing closing delimiter": valid.removesuffix("---\n"),
+            "UTF-8 BOM": "\ufeff" + valid,
+            "leading whitespace": " " + valid,
+        }
+
+        for case, text in rejected.items():
+            with self.subTest(case=case):
+                with self.assertRaises(common.BuildError):
+                    common.check_frontmatter(text)
+
     def test_38_verbatim_source_files(self):
         refs = self.map["source_files"]
         self.assertEqual(38, len(refs))

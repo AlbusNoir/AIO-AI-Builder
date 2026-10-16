@@ -31,6 +31,54 @@ class ClaudeSkillTests(unittest.TestCase):
         self.assertTrue(text.startswith("---\nname: aio-ai-builder\n"))
         self.assertIn("assistant-building requests", text)
 
+    def test_frontmatter_line_endings_and_invalid_inputs(self):
+        """Accept LF/CRLF frontmatter while rejecting malformed input."""
+        valid = (
+            "---\n"
+            "name: aio-ai-builder\n"
+            "description: Designs specialized AI assistants.\n"
+            "---\n"
+        )
+
+        accepted = {
+            "LF": valid,
+            "CRLF": valid.replace("\n", "\r\n"),
+            "LF at EOF": valid.rstrip("\n"),
+            "CRLF at EOF": valid.replace("\n", "\r\n").rstrip("\r\n"),
+        }
+
+        for case, text in accepted.items():
+            with self.subTest(case=case):
+                builder.check_skill_frontmatter(text)
+
+        rejected = {
+            "missing opening delimiter": valid.removeprefix("---\n"),
+            "missing closing delimiter": valid.removesuffix("---\n"),
+            "UTF-8 BOM": "\ufeff" + valid,
+            "leading whitespace": " " + valid,
+        }
+
+        for case, text in rejected.items():
+            with self.subTest(case=case):
+                with self.assertRaises(builder.BuildError):
+                    builder.check_skill_frontmatter(text)
+
+    def test_validate_paths_accepts_crlf_frontmatter(self):
+        """Claude byte-level validation must accept CRLF skill files."""
+        files = dict(self.files)
+
+        original = files["SKILL.md"]
+        self.assertTrue(original.startswith(b"---\n"))
+
+        crlf_skill = original.replace(b"\r\n", b"\n").replace(
+            b"\n", b"\r\n"
+        )
+        self.assertTrue(crlf_skill.startswith(b"---\r\n"))
+
+        files["SKILL.md"] = crlf_skill
+
+        builder.validate_paths(files)
+
     def test_source_inventory_and_reference_roles(self):
         source_files = self.map["source_files"]
         self.assertEqual(38, len(source_files))
